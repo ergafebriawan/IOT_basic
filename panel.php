@@ -6,7 +6,7 @@ if (!isset($_SESSION['is_login'])) {
 include 'layout/header.php';
 ?>
 
-<div class="d-flex justify-content-center">
+<div class="text-center">
     <h2>Panel IOT</h2>
 </div>
 
@@ -17,15 +17,14 @@ $sensor = $query->get_role('sensor');
 $control = $query->get_role('control');
 ?>
 
-<div class="card my-3">
+<div class="card my-5">
     <div class="card-header text-center bg-dark text-light">
         <h3>Sensor</h3>
     </div>
     <div class="card-body">
         <div class="card-deck">
-            <?php
-            foreach ($sensor as $item) {
-            ?>
+
+            <?php foreach ($sensor as $item) {?>
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title text-center">
@@ -36,15 +35,13 @@ $control = $query->get_role('control');
                         </div>
                     </div>
                 </div>
-            <?php
-            }
-            ?>
+            <?php } ?>
 
         </div>
-
     </div>
 </div>
-<div class="card my-3">
+
+<div class="card my-5">
     <div class="card-header text-center bg-dark text-light">
         <h3>Control</h3>
     </div>
@@ -62,9 +59,9 @@ $control = $query->get_role('control');
                         <div class="card-text text-center">
                             <form method="post"><input type="hidden" name="id" value="<?php echo $item2['id'] ?>">
                                 <?php
-                                if ($item2['value'] > 0) {
+                                if ($item2['value'] == 0) {
                                     echo '<input type="submit" name="off" class="btn btn-success" value="ON">';
-                                } else {
+                                } else if ($item2['value'] == 1) {
                                     echo '<input type="submit" name="on" class="btn btn-danger" value="OFF">';
                                 }
                                 ?>
