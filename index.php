@@ -1,3 +1,3 @@
 <?php
-header('location: panel.php');
+header('location: views/panel.php');
 ?>

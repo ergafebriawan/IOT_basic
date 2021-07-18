@@ -1,13 +1,7 @@
 <?php
-class Config
+require "database.php";
+class Config extends Database
 {
-
-    var $connect;
-    var $host = "localhost";
-    var $username = "root";
-    var $password = "";
-    var $database = "iot_basic";
-
     function __construct()
     {
         $this->connect = mysqli_connect($this->host, $this->username, $this->password, $this->database);

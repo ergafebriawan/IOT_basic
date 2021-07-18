@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['is_login'])) {
     header('location:login.php');
 }
-include 'layout/header.php';
+include '../layout/header.php';
 ?>
 
 <div class="text-center">
@@ -11,7 +11,7 @@ include 'layout/header.php';
 </div>
 
 <?php
-include 'config.php';
+include '../config/config.php';
 $query = new Config();
 $sensor = $query->get_role('sensor');
 $control = $query->get_role('control');
@@ -86,5 +86,5 @@ $control = $query->get_role('control');
 
 
 <?php
-include 'layout/footer.php';
+include '../layout/footer.php';
 ?>
