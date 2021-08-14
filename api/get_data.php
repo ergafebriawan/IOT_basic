@@ -2,6 +2,7 @@
 error_reporting(0);
 include "../config.php";
 header('Content-Type: application/json');
+//hello ini cuma comment tambahan
 
 $query = new Config();
 
