@@ -31,16 +31,18 @@
 </code>
 <br>
 
-<p>untuk menggunakan API url hosting/public seperti berikut</p>
+<label>untuk menggunakan API url hosting/public seperti berikut</label><br>
+<label>#get data</label><br>
 <code>
-    #get data\n
     http://domain.com/api/get_data.php
 </code>
+<br>
+<label>#get data per sensor</label><br>
 <code>
-    #get data per sensor\n
     http://domain.com/api/get_data.php?id=1
 </code>
+<br>
+<label>#send data</label><br>
 <code>
-    #send data\n
     http://domain.com/api/send_data.php?id=1&val=20
 </code>
