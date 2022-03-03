@@ -1,8 +1,7 @@
 <?php 
 error_reporting(0);
-include "../config.php";
+include "../config/config.php";
 header('Content-Type: application/json');
-//hello ini cuma comment tambahan
 
 $query = new Config();
 
@@ -15,9 +14,8 @@ if($id === null){
 }
 
 $res = [
-    'message' => 'success',
-    'amount' => count($data),
-    'result' => $data,
+    'message' => 'view all data',
+    'data' => $data
 ];
 
 echo json_encode($res);

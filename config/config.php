@@ -23,7 +23,9 @@ class Config extends Database
 
     public function tombolControl($id, $x)
     {
-        $update = mysqli_query($this->connect, "UPDATE `device` SET value = $x WHERE id= $id");
+        $id_ = intval($id);
+        $val = intval($x);
+        $update = mysqli_query($this->connect, "UPDATE `device` SET value = $val WHERE id= $id_");
         return $update;
     }
     //----------------------------------------------------------------------------------------------------------------------//
@@ -36,6 +38,7 @@ class Config extends Database
         } else {
             $data = mysqli_query($this->connect, "SELECT * FROM `device` WHERE id=$id");
         }
+        // $data = mysqli_query($this->connect, "SELECT * FROM `device`");
         $array_data = array();
         while ($baris = mysqli_fetch_assoc($data)) {
             $array_data[] = $baris;

@@ -31,7 +31,7 @@ $control = $query->get_role('control');
                             <h5><?php echo $item['name'] ?></h5>
                         </div>
                         <div class="card-text text-center">
-                            <h1><?php echo $item['value'] ?> C</h1>
+                            <h1><?php echo $item['value']." ".$item['satuan'] ?> </h1>
                         </div>
                     </div>
                 </div>
@@ -73,9 +73,9 @@ $control = $query->get_role('control');
             }
             error_reporting(0);
             if (isset($_POST['on'])) {
-                $query->tombolControl($_POST['id'], 1);
-            } else if (isset($_POST['off'])) {
                 $query->tombolControl($_POST['id'], 0);
+            } else if (isset($_POST['off'])) {
+                $query->tombolControl($_POST['id'], 1);
             }
             ?>
 

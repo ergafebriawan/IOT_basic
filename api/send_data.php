@@ -1,5 +1,5 @@
 <?php
-include "../config.php";
+include "../config/config.php";
 header('Content-Type: application/json');
 $query = new Config();
 
@@ -9,19 +9,29 @@ $value = $_GET['val'];
 $exec = $query->updateDevice($id, $value);
 $num = count($query->getDevice($id));
 
-$response = array();
+$data = [
+    'id' => $id,
+    'value' => $value
+];
+$res = array();
 
 if ($num > 0) {
     if ($exec) {
-        $response['code'] = '200';
-        $response['message'] = 'Updated Success';
+        $res = [
+            'message' => 'send data success',
+            'data' => $data
+        ];
     } else {
-        $response['code'] = '400';
-        $response['message'] = 'Update Failed';
+        $res = [
+            'message' => 'fail send data',
+            'data' => ''
+        ];
     }
 } else {
-    $response['code'] = '404';
-    $response['message'] = 'No data Selected';
+    $res = [
+        'message' => 'No Data Selected',
+        'data' => ''
+    ];
 }
 
-echo json_encode($response);
+echo json_encode($res);

@@ -2,8 +2,8 @@
 Class Database{
     var $connect;
     var $host = "localhost";
-    var $username = "root";
-    var $password = "";
-    var $database = "iot_basic";
+    var $username = "erga";
+    var $password = "Draxler31";
+    var $database = "iot_lite";
 }
 ?>
