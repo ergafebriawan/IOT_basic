@@ -14,22 +14,22 @@
 </ul>
 <br>
 
-<label>untuk menggunakan API url local seperti berikut:</label><br\>
-<label>#get data</label><br\>
+<label>untuk menggunakan API url local seperti berikut:</label><br>
+<label>#get data</label><br>
 <code>
     http://hostname/nama_folder/api/get_data.php
 </code>
-<br\>
-<label>#get data per sensor</label><br\>
+<br>
+<label>#get data per sensor</label><br>
 <code>
     http://hostname/nama_folder/api/get_data.php?id=1
 </code>
-<br\>
-<label>#send data</label><br\>
+<br>
+<label>#send data</label><br>
 <code>
     http://hostname/nama_folder/api/send_data.php?id=1&val=20
 </code>
-<br\>
+<br>
 
 <p>untuk menggunakan API url hosting/public seperti berikut</p>
 <code>
