@@ -49,7 +49,7 @@ if (isset($_POST['login'])) {
         <input type="password" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Login</button>
 
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2021 Fusionx Project</p>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; <?php echo date('Y');?> Fusionx Project</p>
     </form>
 </body>
 
