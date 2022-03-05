@@ -7,7 +7,7 @@ include '../layout/header.php';
 ?>
 
 <div class="text-center">
-    <h2>Panel IOT</h2>
+    <h2><i class="fa-solid fa-globe mx-2"></i>Panel IOT</h2>
 </div>
 
 <?php
@@ -18,20 +18,23 @@ $control = $query->get_role('control');
 ?>
 
 <div class="card my-5">
-    <div class="card-header text-center bg-dark text-light">
-        <h3>Sensor</h3>
+    <div class="card-header text-center bg-success text-light">
+        <h3><i class="fa-solid fa-microchip mx-2"></i>Sensor</h3>
     </div>
     <div class="card-body">
         <div class="card-deck">
 
-            <?php foreach ($sensor as $item) {?>
+            <?php foreach ($sensor as $item) { ?>
                 <div class="card">
                     <div class="card-body">
+                        <div class="text-center my-2">
+                            <i class="<?php echo $item['icon'] ?> fa-2x"></i>
+                        </div>
                         <div class="card-title text-center">
                             <h5><?php echo $item['name'] ?></h5>
                         </div>
                         <div class="card-text text-center">
-                            <h1><?php echo $item['value']." ".$item['satuan'] ?> </h1>
+                            <h1><?php echo $item['value'] . " " . $item['satuan'] ?> </h1>
                         </div>
                     </div>
                 </div>
@@ -42,8 +45,8 @@ $control = $query->get_role('control');
 </div>
 
 <div class="card my-5">
-    <div class="card-header text-center bg-dark text-light">
-        <h3>Control</h3>
+    <div class="card-header text-center bg-info text-light">
+        <h3><i class="fa-solid fa-toggle-on mx-2"></i>Control</h3>
     </div>
     <div class="card-body">
         <div class="card-deck">
@@ -53,6 +56,9 @@ $control = $query->get_role('control');
             ?>
                 <div class="card">
                     <div class="card-body">
+                        <div class="text-center my-2">
+                            <i class="<?php echo $item2['icon'] ?> fa-2x"></i>
+                        </div>
                         <div class="card-title text-center">
                             <h5><?php echo $item2['name'] ?></h5>
                         </div>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="panel.php"><img src="../assets/icon.png" alt="logo" width="30" height="30"> Basic IOT</a>
+<a class="navbar-brand" href="panel.php"><img src="../assets/logo_light.png" alt="logo" width="30" height="30"> Basic IOT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,7 +9,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?php echo $_SESSION['username']; ?>
+                    <i class="fa-solid fa-user px-2"></i><?php echo $_SESSION['username']; ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profile">Profile</a>
