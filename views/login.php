@@ -43,13 +43,13 @@ if (isset($_POST['login'])) {
         <div class="row">
             <img class="mb-4 mx-auto" src="../assets/logo.png" alt="logo" width="72" height="72">
         </div>
-        <h1 class="h3 mb-3 font-weight-normal text-center">Basic IOT</h1>
+        <h1 class="h3 mb-3 font-weight-normal text-center">Panel IOT Suhu Checker</h1>
 
         <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Login</button>
 
-        <p class="mt-5 mb-3 text-muted text-center">&copy; <?php echo date('Y');?> Fusionx Project</p>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; <?php echo date('Y');?> Skripsi Anjar</p>
     </form>
 </body>
 

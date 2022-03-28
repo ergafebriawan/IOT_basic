@@ -1,27 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="panel.php"><img src="../assets/logo_light.png" alt="logo" width="30" height="30"> Basic IOT</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <a class="navbar-brand" href="panel.php"><img src="../assets/logo.png" alt="logo" width="30" height="30"> PANEL IOT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa-solid fa-user px-2"></i><?php echo $_SESSION['username']; ?>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profile">Profile</a>
-                    <div class="dropdown-divider"></div>
-                    <form action="" method="post">
-                    <input type="submit" name="logout" class="dropdown-item" value="Logout">
-                    </form>
-                </div>
-            </li>
-        </ul>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="panel.php">Panel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="report.php">Report</a>
+      </li>
+    </ul>
 
-    </div>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa-solid fa-user px-2"></i><?php echo $_SESSION['username']; ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profile">Profile</a>
+          <div class="dropdown-divider"></div>
+          <form action="" method="post">
+            <input type="submit" name="logout" class="dropdown-item" value="Logout">
+          </form>
+        </div>
+      </li>
+    </ul>
+
+  </div>
 </nav>
 
 <div class="modal fade" id="profile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -35,9 +44,10 @@
       </div>
       <div class="modal-body">
         <ul class="list-group">
-            <li class="list-group-item">Name : <?php echo $_SESSION['username']; ?></li>
-            <li class="list-group-item">Status : <div class="badge badge-success">Active</div></li>
-            <li class="list-group-item">Password : *****</li>
+          <li class="list-group-item">Name : <?php echo $_SESSION['username']; ?></li>
+          <li class="list-group-item">Status : <div class="badge badge-success">Active</div>
+          </li>
+          <li class="list-group-item">Password : *****</li>
         </ul>
       </div>
     </div>
@@ -45,10 +55,10 @@
 </div>
 
 <?php
-if(isset($_POST['logout'])){
-    session_start();
-    session_unset();
-    session_destroy();
-    header('location:login.php');
+if (isset($_POST['logout'])) {
+  session_start();
+  session_unset();
+  session_destroy();
+  header('location:login.php');
 }
 ?>

@@ -4,6 +4,6 @@ Class Database{
     var $host = "localhost";
     var $username = "erga";
     var $password = "Draxler31";
-    var $database = "iot_lite";
+    var $database = "anjar_IOT";
 }
 ?>
